@@ -1,13 +1,31 @@
 <?php if ( ! isset($_SESSION['username']) AND ! isset($_SESSION['level']) ) {?> 
 
-	<h3>Anda Harus Login Untuk Dapat Mengakses Menu Ini</h3>
-	<a href="login.php">LOGIN</a>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="?page=home">Pancong Dong</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="?page=home">Home</a>
+        </li>
+      </ul> 
+      <ul class="navbar-nav">
+        <li><a class="btn btn-outline-success" href="login.php" >Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<h3>Akses Login Diperlukan</h3>
 
 <?php }elseif ($_SESSION['level'] === "admin") {?> 
 	
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Website Pramuka</a>
+    <a class="navbar-brand" href="?page=home">Pancong Dong</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,7 +53,7 @@
 <?php }else {?>
 	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Website Pramuka</a>
+    <a class="navbar-brand" href="?page=home">Pancong Dong</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
